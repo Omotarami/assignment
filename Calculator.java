@@ -4,9 +4,18 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[]args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter Principal: ");
-		int Principal = sc.nextInt();
+        int Principal;
+        Scanner sc = new Scanner(System.in);
+        
+        while (true){
+            System.out.print("Enter Principal: ");
+            Principal = sc.nextInt();
+            if (Principal >= 1000 && Principal <= 1000000){
+                break;
+            }
+            System.out.println("Enter valid values");
+        }
+
 		System.out.print("Enter R: ");
 		Float R = sc.nextFloat();
 		System.out.print("Enter n: ");
